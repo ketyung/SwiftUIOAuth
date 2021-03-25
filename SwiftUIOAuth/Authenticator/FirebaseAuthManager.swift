@@ -8,11 +8,10 @@
 import SwiftUI
 import Firebase
 import FirebaseUI
-import FirebaseAuth
 
 typealias FAM = FirebaseAuthManager
 
-class FirebaseAuthManager : NSObject {
+class FirebaseAuthManager : NSObject{
     
     
     static let shared = FirebaseAuthManager()
@@ -42,7 +41,7 @@ class FirebaseAuthManager : NSObject {
         
         if let authUI = FUIAuth.defaultAuthUI(){
         
-            authUI.delegate = delegate
+            authUI.delegate = delegate ?? self
             self.authUI = authUI
         }
         
@@ -73,6 +72,23 @@ extension FirebaseAuthManager {
         }
         // other URL handling goes here.
         return false
+    }
+}
+
+
+extension FirebaseAuthManager : FUIAuthDelegate  {
+    
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+     
+        if let err = error {
+            
+            print("It's Error::\(err)")
+            return
+        }
+        
+        if let result = authDataResult {
+            print("result::userId::\(result.user.uid)")
+        }
     }
 }
 
