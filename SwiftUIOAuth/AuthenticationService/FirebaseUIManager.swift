@@ -5,46 +5,32 @@
 //  Created by Chee Ket Yung on 24/03/2021.
 //
 
-import SwiftUI
 import Firebase
 import FirebaseUI
 
-typealias FAM = FirebaseUIManager
+typealias FUM = FirebaseUIManager
 
 class FirebaseUIManager : NSObject{
-    
-    
+        
     static let shared = FirebaseUIManager()
     
     private var withNavigationBar : Bool = false
-    
-    private var authUI : FUIAuth?
 
-    
     var authViewController : UIViewController {
         if (withNavigationBar){
             
-            let authVC = MyAuthViewController(authUI: authUI!)
+            let authVC = MyAuthViewController(authUI: FUIAuth.defaultAuthUI()!)
             let nav = UINavigationController(rootViewController: authVC)
             return nav
         }
-        return MyAuthViewController(authUI: authUI!)
+        return MyAuthViewController(authUI: FUIAuth.defaultAuthUI()!)
     }
     
-    init(delegate : FUIAuthDelegate? = nil, withNavigationBar : Bool = false){
+    init(withNavigationBar : Bool = false){
         
         FirebaseApp.configure()
-        
         super.init()
-        
         self.withNavigationBar = withNavigationBar
-        
-        if let authUI = FUIAuth.defaultAuthUI(){
-        
-            authUI.delegate = delegate ?? self
-            self.authUI = authUI
-        }
-        
         self.setupProviders()
     }
     
@@ -56,7 +42,7 @@ class FirebaseUIManager : NSObject{
           /**FUIFacebookAuth(),
           FUIPhoneAuth(authUI:FUIAuth.defaultAuthUI()!), */
         ]
-        self.authUI?.providers = providers
+        FUIAuth.defaultAuthUI()?.providers = providers
     }
     
 }
@@ -67,7 +53,7 @@ extension FirebaseUIManager {
     func canHandle(url : URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool{
         
         let sourceApplication = options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String?
-        if self.authUI?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
+        if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
           return true
         }
         // other URL handling goes here.
@@ -77,7 +63,7 @@ extension FirebaseUIManager {
     func signOut(onError handler : ((Error?) -> Void)? = nil ){
         do {
   
-          try self.authUI?.signOut()
+          try FUIAuth.defaultAuthUI()?.signOut()
       
           if let handler = handler {
             
@@ -106,25 +92,11 @@ extension FirebaseUIManager {
 }
 
 
-extension FirebaseUIManager : FUIAuthDelegate  {
-    
-    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-     
-        if let err = error {
-            
-            print("It's Error::\(err)")
-            return
-        }
-        
-        if let result = authDataResult {
-            print("result::userId::\(result.user.uid), \(result.user.displayName ?? "")")
-        }
-    }
-    
+extension FirebaseUIManager {
     
     func setAuthDelegate(_ delegate : FUIAuthDelegate){
         
-        self.authUI?.delegate = delegate
+        FUIAuth.defaultAuthUI()?.delegate = delegate
     }
 }
 

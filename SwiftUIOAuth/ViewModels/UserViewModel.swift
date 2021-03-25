@@ -20,7 +20,7 @@ class UserViewModel : NSObject, ObservableObject {
     override init(){
         
         super.init()
-        FAM.shared.setAuthDelegate(self)
+        FUM.shared.setAuthDelegate(self)
     }
     
     var hasSignedIn : Bool {
@@ -94,7 +94,7 @@ extension UserViewModel {
     }
     
     func signOut(){
-        FAM.shared.signOut{
+        FUM.shared.signOut{
             err in
             if let err = err {
                 print("Signed out error :\(err)")
