@@ -16,8 +16,15 @@ struct HomeView : View {
         
         VStack(spacing: 50){
             
-            Text("Welcome Back \(userViewModel.displayName)")
-            .font(.headline)
+            VStack {
+           
+                Text("Welcome Back")
+                .font(.body)
+                
+                Text(userViewModel.displayName)
+                .font(.headline)
+               
+            }
             
             Button(action: {
                 userViewModel.signOut()
