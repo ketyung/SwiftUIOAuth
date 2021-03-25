@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User {
+struct User : Codable {
     
     private var signedIn : Bool = false
     
@@ -20,7 +20,7 @@ struct User {
         
         get{
             
-            return self.signedIn || FAM.shared.isSignedIn()
+            return self.signedIn && FAM.shared.isSignedIn()
         }
     }
     

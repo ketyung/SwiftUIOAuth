@@ -10,7 +10,12 @@ import FirebaseUI
 
 class UserViewModel : NSObject, ObservableObject {
     
-    @Published private var user = User()
+    @Published private var user =  DS.shared.load() {
+        
+        didSet {
+            saveUser()
+        }
+    }
     
     override init(){
         
@@ -57,8 +62,14 @@ extension UserViewModel : FUIAuthDelegate{
         if let result = authDataResult {
             
             self.user.hasSignedIn = true
-            self.user.displayName = result.user.displayName ?? ""
+            
+            if let name = result.user.displayName {
+           
+                self.user.displayName = name
+            }
+                
             self.user.userId = result.user.uid
+            
         }
     }
     
@@ -66,9 +77,19 @@ extension UserViewModel : FUIAuthDelegate{
 
 extension UserViewModel {
     
-    func clear(){
+    
+    func saveUser(){
+        
+        DS.shared.save(user)
+       // print("saved.User::")
+    }
+}
+
+
+extension UserViewModel {
+    
+    private func clear(){
         user.displayName = ""
-        user.hasSignedIn = false
         user.userId = ""
     }
     
@@ -79,9 +100,8 @@ extension UserViewModel {
                 print("Signed out error :\(err)")
             }
             else {
-                
+                self.user.hasSignedIn = false
                 self.clear()
-                
             }
         }
         
