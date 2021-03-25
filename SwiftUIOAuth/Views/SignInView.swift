@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SignInView: View {
     
     @EnvironmentObject private var userViewModel : UserViewModel
     
@@ -18,7 +18,7 @@ struct ContentView: View {
 }
 
 
-extension ContentView {
+extension SignInView {
     
     
     func signInView() -> some View {
@@ -27,7 +27,7 @@ extension ContentView {
             
             SignInViewUI()
             .padding()
-            .frame(width: 300, height:120)
+            .frame(width: 300, height:110)
             .background(Color.black)
             .cornerRadius(20)
             
@@ -37,8 +37,8 @@ extension ContentView {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SignInView()
     }
 }

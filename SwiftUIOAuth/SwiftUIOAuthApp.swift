@@ -32,12 +32,12 @@ extension SwiftUIOAuthApp {
         if ( userViewModel.hasSignedIn ){
             
             withAnimation {
-
                 HomeView()
             }
         }
         else {
-            ContentView()
+          
+            SignInView()
         }
     }
 }

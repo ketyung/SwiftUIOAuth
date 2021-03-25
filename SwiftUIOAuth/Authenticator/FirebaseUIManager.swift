@@ -79,6 +79,10 @@ extension FirebaseUIManager {
   
           try self.authUI?.signOut()
       
+          if let handler = handler {
+            
+             handler(nil)
+          }
         }
         catch (let err){
             
