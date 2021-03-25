@@ -9,12 +9,12 @@ import SwiftUI
 import Firebase
 import FirebaseUI
 
-typealias FAM = FirebaseAuthManager
+typealias FAM = FirebaseUIManager
 
-class FirebaseAuthManager : NSObject{
+class FirebaseUIManager : NSObject{
     
     
-    static let shared = FirebaseAuthManager()
+    static let shared = FirebaseUIManager()
     
     private var withNavigationBar : Bool = false
     
@@ -53,15 +53,15 @@ class FirebaseAuthManager : NSObject{
         
         let providers: [FUIAuthProvider] = [
           FUIGoogleAuth(),
-          /**FUIFacebookAuth(), */
-          FUIPhoneAuth(authUI:FUIAuth.defaultAuthUI()!),
+          /**FUIFacebookAuth(),
+          FUIPhoneAuth(authUI:FUIAuth.defaultAuthUI()!), */
         ]
         self.authUI?.providers = providers
     }
     
 }
 
-extension FirebaseAuthManager {
+extension FirebaseUIManager {
         
     
     func canHandle(url : URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool{
@@ -73,10 +73,25 @@ extension FirebaseAuthManager {
         // other URL handling goes here.
         return false
     }
+    
+    func signOut(onError handler : ((Error?) -> Void)? = nil ){
+        do {
+  
+          try self.authUI?.signOut()
+      
+        }
+        catch (let err){
+            
+            if let handler = handler {
+                
+                handler(err)
+            }
+        }
+    }
 }
 
 
-extension FirebaseAuthManager : FUIAuthDelegate  {
+extension FirebaseUIManager : FUIAuthDelegate  {
     
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
      
@@ -87,8 +102,14 @@ extension FirebaseAuthManager : FUIAuthDelegate  {
         }
         
         if let result = authDataResult {
-            print("result::userId::\(result.user.uid)")
+            print("result::userId::\(result.user.uid), \(result.user.displayName ?? "")")
         }
+    }
+    
+    
+    func setAuthDelegate( delegate : FUIAuthDelegate){
+        
+        self.authUI?.delegate = delegate
     }
 }
 

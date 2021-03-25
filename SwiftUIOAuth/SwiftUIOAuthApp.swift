@@ -12,8 +12,31 @@ struct SwiftUIOAuthApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
+    
+    @StateObject private var userViewModel = UserViewModel()
+    
     var body: some Scene {
         WindowGroup {
+            
+            view()
+            .environmentObject(userViewModel)
+        }
+    }
+}
+
+extension SwiftUIOAuthApp {
+    
+    @ViewBuilder
+    private func view() -> some View {
+        
+        if ( userViewModel.hasSignedIn ){
+            
+            withAnimation {
+
+                HomeView()
+            }
+        }
+        else {
             ContentView()
         }
     }

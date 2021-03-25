@@ -8,20 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject private var userViewModel : UserViewModel
+    
     var body: some View {
         
+        signInView()
+    }
+}
+
+
+extension ContentView {
+    
+    
+    func signInView() -> some View {
+        
         VStack {
-   
+            
             SignInViewUI()
             .padding()
-            .frame(width: 300, height:180)
+            .frame(width: 300, height:120)
             .background(Color.black)
             .cornerRadius(20)
             
             Spacer()
             .frame(height:200)
         }
-       
     }
 }
 
