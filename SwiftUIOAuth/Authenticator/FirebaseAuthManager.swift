@@ -12,7 +12,7 @@ import FirebaseAuth
 
 typealias FAM = FirebaseAuthManager
 
-class FirebaseAuthManager : NSObject, FUIAuthDelegate {
+class FirebaseAuthManager : NSObject {
     
     
     static let shared = FirebaseAuthManager()
@@ -20,16 +20,29 @@ class FirebaseAuthManager : NSObject, FUIAuthDelegate {
     private var withNavigationBar : Bool = false
     
     private var authUI : FUIAuth?
+
     
+    var authViewController : UIViewController {
+        if (withNavigationBar){
+            
+            let authVC = MyAuthViewController(authUI: authUI!)
+            let nav = UINavigationController(rootViewController: authVC)
+            return nav
+        }
+        return MyAuthViewController(authUI: authUI!)
+    }
     
-    override init(){
+    init(delegate : FUIAuthDelegate? = nil, withNavigationBar : Bool = false){
         
         FirebaseApp.configure()
+        
         super.init()
+        
+        self.withNavigationBar = withNavigationBar
         
         if let authUI = FUIAuth.defaultAuthUI(){
         
-            authUI.delegate = self
+            authUI.delegate = delegate
             self.authUI = authUI
         }
         
@@ -50,17 +63,7 @@ class FirebaseAuthManager : NSObject, FUIAuthDelegate {
 }
 
 extension FirebaseAuthManager {
-    
-    func view() -> UIView {
         
-        let nav = authUI!.authViewController()
-        nav.setNavigationBarHidden(!withNavigationBar, animated: false)
-        
-        let view = nav.view
-        view?.backgroundColor = .clear
-        return view!
-    }
-    
     
     func canHandle(url : URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool{
         
@@ -73,3 +76,20 @@ extension FirebaseAuthManager {
     }
 }
 
+
+
+class MyAuthViewController : FUIAuthPickerViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let scrollView = view.subviews[0]
+        scrollView.backgroundColor = .clear
+        let contentView = scrollView.subviews[0]
+        contentView.backgroundColor = .clear
+
+        view.backgroundColor = .clear
+        
+    }
+
+}

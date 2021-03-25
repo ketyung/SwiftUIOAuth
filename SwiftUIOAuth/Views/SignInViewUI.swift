@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct SignInViewUI: UIViewRepresentable {
-  
-
-    func makeUIView(context: Context) -> UIView {
-        return FAM.shared.view()
+struct SignInViewUI: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<SignInViewUI>) ->
+        UIViewController {
+        return FAM.shared.authViewController
     }
 
-    func updateUIView(_ uiView: UIView, context: Context) {
-        // Empty
+    func updateUIViewController(_ uiViewController: UIViewController,
+               context: UIViewControllerRepresentableContext<SignInViewUI>) {
+        // empty
     }
-
 }
