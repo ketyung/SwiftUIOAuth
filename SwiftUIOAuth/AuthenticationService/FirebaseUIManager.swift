@@ -97,11 +97,10 @@ extension FirebaseUIManager {
     func isSignedIn() -> Bool {
         
         if let _ = Firebase.Auth.auth().currentUser{
-            
-            return true
-            
-        }
         
+            return true
+        }
+    
         return false
     }
 }
@@ -123,7 +122,7 @@ extension FirebaseUIManager : FUIAuthDelegate  {
     }
     
     
-    func setAuthDelegate( delegate : FUIAuthDelegate){
+    func setAuthDelegate(_ delegate : FUIAuthDelegate){
         
         self.authUI?.delegate = delegate
     }

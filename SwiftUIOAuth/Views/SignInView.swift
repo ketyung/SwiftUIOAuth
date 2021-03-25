@@ -28,8 +28,10 @@ extension SignInView {
             SignInViewUI()
             .padding()
             .frame(width: 300, height:110)
-            .background(Color.black)
-            .cornerRadius(20)
+            .background(Color.green)
+            .cornerRadius(30)
+            .shadow(radius: 20 )
+            
             
             Spacer()
             .frame(height:200)

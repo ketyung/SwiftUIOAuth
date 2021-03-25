@@ -20,7 +20,7 @@ class UserViewModel : NSObject, ObservableObject {
     override init(){
         
         super.init()
-        FAM.shared.setAuthDelegate(delegate: self)
+        FAM.shared.setAuthDelegate(self)
     }
     
     var hasSignedIn : Bool {
