@@ -9,7 +9,20 @@ import Foundation
 
 struct User {
     
-    var hasSignedIn : Bool = false
+    private var signedIn : Bool = false
+    
+    var hasSignedIn : Bool {
+        
+        set(newSignedIn){
+            
+            self.signedIn = newSignedIn
+        }
+        
+        get{
+            
+            return self.signedIn || FAM.shared.isSignedIn()
+        }
+    }
     
     var userId : String = ""
     

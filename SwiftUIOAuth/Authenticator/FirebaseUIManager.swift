@@ -92,6 +92,18 @@ extension FirebaseUIManager {
             }
         }
     }
+    
+    
+    func isSignedIn() -> Bool {
+        
+        if let _ = Firebase.Auth.auth().currentUser{
+            
+            return true
+            
+        }
+        
+        return false
+    }
 }
 
 
