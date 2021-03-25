@@ -13,11 +13,15 @@ struct ContentView: View {
         VStack {
    
             SignInViewUI()
-            .background(Color.white)
+            .padding()
+            .frame(width: 300, height:180)
+            .background(Color.black)
+            .cornerRadius(20)
             
             Spacer()
             .frame(height:200)
         }
+       
     }
 }
 
