@@ -17,6 +17,7 @@ class FirebaseAuthManager : NSObject, FUIAuthDelegate {
     
     static let shared = FirebaseAuthManager()
     
+    private var withNavigationBar : Bool = false
     
     private var authUI : FUIAuth?
     
@@ -52,7 +53,12 @@ extension FirebaseAuthManager {
     
     func view() -> UIView {
         
-        return authUI!.authViewController().view
+        let nav = authUI!.authViewController()
+        nav.setNavigationBarHidden(!withNavigationBar, animated: false)
+        
+        let view = nav.view
+        view?.backgroundColor = .clear
+        return view!
     }
     
     
