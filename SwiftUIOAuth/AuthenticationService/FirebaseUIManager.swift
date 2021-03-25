@@ -113,7 +113,6 @@ class MyAuthViewController : FUIAuthPickerViewController {
         contentView.backgroundColor = .clear
 
         view.backgroundColor = .clear
-        
     }
 
 }
