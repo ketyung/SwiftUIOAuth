@@ -39,8 +39,9 @@ class FirebaseUIManager : NSObject{
         
         let providers: [FUIAuthProvider] = [
           FUIGoogleAuth(),
-          /**FUIFacebookAuth(),
-          FUIPhoneAuth(authUI:FUIAuth.defaultAuthUI()!), */
+          FUIFacebookAuth(),
+          FUIOAuth.twitterAuthProvider(),
+          /** FUIPhoneAuth(authUI:FUIAuth.defaultAuthUI()!), */
         ]
         FUIAuth.defaultAuthUI()?.providers = providers
     }
