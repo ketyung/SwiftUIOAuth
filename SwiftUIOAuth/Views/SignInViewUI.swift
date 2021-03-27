@@ -11,7 +11,8 @@ struct SignInViewUI: UIViewControllerRepresentable {
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<SignInViewUI>) ->
         UIViewController {
-        return FUM.shared.authViewController
+        
+        return AM.shared.authViewController
     }
 
     func updateUIViewController(_ uiViewController: UIViewController,

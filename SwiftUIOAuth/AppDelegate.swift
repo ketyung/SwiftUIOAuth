@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    
+
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
      
-        return FUM.shared.canHandle(url: url, options: options)
+        //return false
+        return AM.shared.canHandle(url: url, options: options)
     }
 }

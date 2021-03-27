@@ -20,7 +20,7 @@ struct User : Codable {
         
         get{
             
-            return self.signedIn && FUM.shared.isSignedIn()
+            return self.signedIn && AM.shared.isSignedIn()
         }
     }
     

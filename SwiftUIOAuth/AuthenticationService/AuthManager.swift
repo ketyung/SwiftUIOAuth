@@ -8,11 +8,11 @@
 import Firebase
 import FirebaseUI
 
-typealias FUM = FirebaseUIManager
+typealias AM = AuthManager
 
-class FirebaseUIManager : NSObject{
+class AuthManager : NSObject{
         
-    static let shared = FirebaseUIManager()
+    static let shared = AuthManager()
     
     private var withNavigationBar : Bool = false
 
@@ -39,7 +39,7 @@ class FirebaseUIManager : NSObject{
         
         let providers: [FUIAuthProvider] = [
           FUIGoogleAuth(),
-          FUIFacebookAuth(),
+          FUIFacebookAuth(), 
           FUIOAuth.twitterAuthProvider(),
           /** FUIPhoneAuth(authUI:FUIAuth.defaultAuthUI()!), */
         ]
@@ -48,8 +48,13 @@ class FirebaseUIManager : NSObject{
     
 }
 
-extension FirebaseUIManager {
+extension AuthManager {
         
+    
+    func defaultAuthViewController() -> UIViewController? {
+        
+        return FUIAuth.defaultAuthUI()?.authViewController()
+    }
     
     func canHandle(url : URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool{
         
@@ -93,7 +98,7 @@ extension FirebaseUIManager {
 }
 
 
-extension FirebaseUIManager {
+extension AuthManager {
     
     func setAuthDelegate(_ delegate : FUIAuthDelegate){
         

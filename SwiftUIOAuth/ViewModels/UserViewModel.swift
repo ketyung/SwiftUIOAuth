@@ -20,7 +20,7 @@ class UserViewModel : NSObject, ObservableObject {
     override init(){
         
         super.init()
-        FUM.shared.setAuthDelegate(self)
+        AM.shared.setAuthDelegate(self)
     }
     
     var hasSignedIn : Bool {
@@ -51,6 +51,7 @@ class UserViewModel : NSObject, ObservableObject {
 
 extension UserViewModel : FUIAuthDelegate{
     
+    
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
      
         if let err = error {
@@ -58,6 +59,8 @@ extension UserViewModel : FUIAuthDelegate{
             print("It's Error::\(err)")
             return
         }
+        
+       // print("signIned...")
         
         if let result = authDataResult {
             
@@ -94,7 +97,7 @@ extension UserViewModel {
     }
     
     func signOut(){
-        FUM.shared.signOut{
+        AM.shared.signOut{
             err in
             if let err = err {
                 print("Signed out error :\(err)")

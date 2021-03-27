@@ -18,8 +18,9 @@ struct SwiftUIOAuthApp: App {
     var body: some Scene {
         WindowGroup {
             
-            view()
-            .environmentObject(userViewModel)
+            TestView()
+            //view()
+            //.environmentObject(userViewModel)
         }
     }
 }

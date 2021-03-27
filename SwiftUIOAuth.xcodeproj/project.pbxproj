@@ -13,8 +13,7 @@
 		102A20B9260B640B008FCDFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 102A20B8260B640B008FCDFD /* Preview Assets.xcassets */; };
 		102A20C4260B640B008FCDFD /* SwiftUIOAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A20C3260B640B008FCDFD /* SwiftUIOAuthTests.swift */; };
 		102A20CF260B640B008FCDFD /* SwiftUIOAuthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A20CE260B640B008FCDFD /* SwiftUIOAuthUITests.swift */; };
-		102A20F7260B6CAE008FCDFD /* FirebaseUIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A20F6260B6CAE008FCDFD /* FirebaseUIManager.swift */; };
-		102A2319260C124D008FCDFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 102A2318260C124D008FCDFD /* GoogleService-Info.plist */; };
+		102A20F7260B6CAE008FCDFD /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A20F6260B6CAE008FCDFD /* AuthManager.swift */; };
 		102A231F260C12DA008FCDFD /* SignInViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A231E260C12DA008FCDFD /* SignInViewUI.swift */; };
 		102A232A260C174C008FCDFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A2329260C174C008FCDFD /* AppDelegate.swift */; };
 		102A233A260C37CD008FCDFD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A2339260C37CD008FCDFD /* User.swift */; };
@@ -22,6 +21,8 @@
 		102A2344260C385B008FCDFD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A2343260C385B008FCDFD /* Extensions.swift */; };
 		102A234C260C3AE6008FCDFD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A234B260C3AE6008FCDFD /* HomeView.swift */; };
 		102A23C1260C5A5D008FCDFD /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A23C0260C5A5D008FCDFD /* UserDataStore.swift */; };
+		102A23CF260EBE3F008FCDFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 102A23CE260EBE3F008FCDFD /* GoogleService-Info.plist */; };
+		102A23D4260EBEE6008FCDFD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A23D3260EBEE6008FCDFD /* TestView.swift */; };
 		C2474117BDD8635B6A2C8E23 /* Pods_SwiftUIOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BF2553E7A3156EB24F561E /* Pods_SwiftUIOAuth.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +56,7 @@
 		102A20CA260B640B008FCDFD /* SwiftUIOAuthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIOAuthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		102A20CE260B640B008FCDFD /* SwiftUIOAuthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIOAuthUITests.swift; sourceTree = "<group>"; };
 		102A20D0260B640B008FCDFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		102A20F6260B6CAE008FCDFD /* FirebaseUIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUIManager.swift; sourceTree = "<group>"; };
-		102A2318260C124D008FCDFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		102A20F6260B6CAE008FCDFD /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		102A231E260C12DA008FCDFD /* SignInViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewUI.swift; sourceTree = "<group>"; };
 		102A2329260C174C008FCDFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		102A2339260C37CD008FCDFD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -64,6 +64,8 @@
 		102A2343260C385B008FCDFD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		102A234B260C3AE6008FCDFD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		102A23C0260C5A5D008FCDFD /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
+		102A23CE260EBE3F008FCDFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		102A23D3260EBEE6008FCDFD /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		165F6677F143B26E4B4260FB /* Pods-SwiftUIOAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIOAuth.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIOAuth/Pods-SwiftUIOAuth.release.xcconfig"; sourceTree = "<group>"; };
 		202FA6C6421168636A88D6C6 /* Pods-SwiftUIOAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIOAuth.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIOAuth/Pods-SwiftUIOAuth.debug.xcconfig"; sourceTree = "<group>"; };
 		65BF2553E7A3156EB24F561E /* Pods_SwiftUIOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +130,7 @@
 				102A20B1260B640A008FCDFD /* SwiftUIOAuthApp.swift */,
 				102A2329260C174C008FCDFD /* AppDelegate.swift */,
 				102A20B5260B640B008FCDFD /* Assets.xcassets */,
-				102A2318260C124D008FCDFD /* GoogleService-Info.plist */,
+				102A23CE260EBE3F008FCDFD /* GoogleService-Info.plist */,
 				102A20BA260B640B008FCDFD /* Info.plist */,
 				102A2343260C385B008FCDFD /* Extensions.swift */,
 				102A20B7260B640B008FCDFD /* Preview Content */,
@@ -168,6 +170,7 @@
 				102A20B3260B640A008FCDFD /* SignInView.swift */,
 				102A231E260C12DA008FCDFD /* SignInViewUI.swift */,
 				102A234B260C3AE6008FCDFD /* HomeView.swift */,
+				102A23D3260EBEE6008FCDFD /* TestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,7 +178,7 @@
 		102A2314260C07FE008FCDFD /* AuthenticationService */ = {
 			isa = PBXGroup;
 			children = (
-				102A20F6260B6CAE008FCDFD /* FirebaseUIManager.swift */,
+				102A20F6260B6CAE008FCDFD /* AuthManager.swift */,
 			);
 			path = AuthenticationService;
 			sourceTree = "<group>";
@@ -330,7 +333,7 @@
 			files = (
 				102A20B9260B640B008FCDFD /* Preview Assets.xcassets in Resources */,
 				102A20B6260B640B008FCDFD /* Assets.xcassets in Resources */,
-				102A2319260C124D008FCDFD /* GoogleService-Info.plist in Resources */,
+				102A23CF260EBE3F008FCDFD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +419,7 @@
 			files = (
 				102A234C260C3AE6008FCDFD /* HomeView.swift in Sources */,
 				102A20B4260B640A008FCDFD /* SignInView.swift in Sources */,
+				102A23D4260EBEE6008FCDFD /* TestView.swift in Sources */,
 				102A20B2260B640A008FCDFD /* SwiftUIOAuthApp.swift in Sources */,
 				102A233A260C37CD008FCDFD /* User.swift in Sources */,
 				102A2344260C385B008FCDFD /* Extensions.swift in Sources */,
@@ -423,7 +427,7 @@
 				102A232A260C174C008FCDFD /* AppDelegate.swift in Sources */,
 				102A233F260C37FF008FCDFD /* UserViewModel.swift in Sources */,
 				102A23C1260C5A5D008FCDFD /* UserDataStore.swift in Sources */,
-				102A20F7260B6CAE008FCDFD /* FirebaseUIManager.swift in Sources */,
+				102A20F7260B6CAE008FCDFD /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

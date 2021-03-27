@@ -23,6 +23,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>fb1648934081962741</string>
 				<string>com.googleusercontent.apps.58004771620-kglmpq4lqkcjg0tas90btpurphgern01</string>
 			</array>
 		</dict>
@@ -56,19 +57,15 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>		
-	<key>CFBundleURLTypes</key>
-	<array>
-	  <dict>
-	  <key>CFBundleURLSchemes</key>
-	  <array>
-		<string>fb1648934081962741</string>
-	  </array>
-	  </dict>
 	</array>
 	<key>FacebookAppID</key>
 	<string>1648934081962741</string>
 	<key>FacebookDisplayName</key>
 	<string>SwiftUIOAuth</string>
+	<key>LSApplicationQueriesSchemes</key>
+    <array>
+    <string>fbauth</string>
+    <string>fbauth2</string>
+    </array>
 </dict>
 </plist>
