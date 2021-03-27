@@ -17,6 +17,7 @@ class AuthManager : NSObject{
     private var withNavigationBar : Bool = false
 
     var authViewController : UIViewController {
+        /** */
         if (withNavigationBar){
             
             let authVC = MyAuthViewController(authUI: FUIAuth.defaultAuthUI()!)
