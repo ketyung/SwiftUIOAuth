@@ -25,6 +25,9 @@ extension SignInView {
         
         VStack {
             
+            Spacer()
+            .frame(height:50)
+            
             SignInViewUI()
             .padding()
             .frame(width: 300, height:240)
