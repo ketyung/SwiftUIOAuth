@@ -25,14 +25,12 @@ extension SignInView {
         
         VStack {
             
-            
             SignInViewUI()
             .padding()
             .frame(width: 300, height:240)
             .background(Color.green)
             .cornerRadius(30)
             .shadow(radius: 20 )
-            
         }
     }
 }

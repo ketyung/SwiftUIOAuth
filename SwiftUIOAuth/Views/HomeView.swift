@@ -11,7 +11,7 @@ struct HomeView : View {
     
     @EnvironmentObject private var userViewModel : UserViewModel
    
-    @State private var isAnimating = true
+   // @State private var isAnimating = true
     
     var body : some View {
         
@@ -27,11 +27,12 @@ struct HomeView : View {
             .frame(height:50)
             
             Image("welcome")
+                /**
             .scaleEffect(self.isAnimating ? 0.8: 1)
             .animation(Animation.linear(duration: 1).repeatForever())
             .onAppear{
                 self.isAnimating.toggle()
-            }
+            }*/
             
         }
     }
