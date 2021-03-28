@@ -14,6 +14,10 @@ struct TabbedView : View {
     var body : some View {
         
         tabbedViews()
+        .onAppear{
+            // always reset back to zero
+            self.selectedTab = 0
+        }
     }
 }
 
