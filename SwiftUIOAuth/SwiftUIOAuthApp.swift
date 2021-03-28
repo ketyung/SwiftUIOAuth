@@ -25,6 +25,7 @@ struct SwiftUIOAuthApp: App {
     }
 }
 
+
 extension SwiftUIOAuthApp {
     
     @ViewBuilder

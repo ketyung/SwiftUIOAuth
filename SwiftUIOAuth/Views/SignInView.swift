@@ -25,8 +25,6 @@ extension SignInView {
         
         VStack {
             
-            Spacer()
-            .frame(height:50)
             
             SignInViewUI()
             .padding()
@@ -35,9 +33,6 @@ extension SignInView {
             .cornerRadius(30)
             .shadow(radius: 20 )
             
-            
-            Spacer()
-            .frame(height:200)
         }
     }
 }
