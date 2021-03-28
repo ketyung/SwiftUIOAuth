@@ -58,8 +58,8 @@ struct SettingsView : View {
                         self.showSignOutPrompt.toggle()
                     }){
                     
-                        Text("Sign Out")
-                        .foregroundColor(.gray)
+                       SettingRowView(title: "Sign Out", systemImageName: "arrow.backward.circle")
+                      .foregroundColor(.gray)
                         
                     }
               }
