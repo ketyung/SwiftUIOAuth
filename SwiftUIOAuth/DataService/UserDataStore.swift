@@ -41,6 +41,13 @@ struct UserDataStore {
         
         return User()
     }
+    
+    func removeUser() {
+        
+        let defaults = UserDefaults.standard
+     
+        defaults.removeObject(forKey: key)
+    }
 }
 
 

@@ -91,10 +91,6 @@ extension UserViewModel {
 
 extension UserViewModel {
     
-    private func clear(){
-        user.displayName = ""
-        user.userId = ""
-    }
     
     func signOut(){
         AM.shared.signOut{
@@ -104,7 +100,7 @@ extension UserViewModel {
             }
             else {
                 self.user.hasSignedIn = false
-                self.clear()
+                DS.shared.removeUser()
             }
         }
         
