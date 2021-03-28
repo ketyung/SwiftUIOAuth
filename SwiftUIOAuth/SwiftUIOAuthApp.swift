@@ -33,7 +33,7 @@ extension SwiftUIOAuthApp {
         if ( userViewModel.hasSignedIn ){
             
             withAnimation {
-                HomeView()
+                TabbedView()
             }
         }
         else {

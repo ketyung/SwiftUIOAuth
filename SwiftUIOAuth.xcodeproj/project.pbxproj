@@ -21,8 +21,11 @@
 		102A2344260C385B008FCDFD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A2343260C385B008FCDFD /* Extensions.swift */; };
 		102A234C260C3AE6008FCDFD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A234B260C3AE6008FCDFD /* HomeView.swift */; };
 		102A23C1260C5A5D008FCDFD /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A23C0260C5A5D008FCDFD /* UserDataStore.swift */; };
-		102A23D4260EBEE6008FCDFD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A23D3260EBEE6008FCDFD /* TestView.swift */; };
+		102A23D4260EBEE6008FCDFD /* TabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A23D3260EBEE6008FCDFD /* TabbedView.swift */; };
 		102A23E7260EDD50008FCDFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 102A23E6260EDD50008FCDFD /* GoogleService-Info.plist */; };
+		102A23EC26100CD5008FCDFD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A23EB26100CD5008FCDFD /* SettingsView.swift */; };
+		102A23F426100D0A008FCDFD /* BlogPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A23F326100D0A008FCDFD /* BlogPostsView.swift */; };
+		102A23F926100D10008FCDFD /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102A23F826100D10008FCDFD /* WebView.swift */; };
 		C2474117BDD8635B6A2C8E23 /* Pods_SwiftUIOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BF2553E7A3156EB24F561E /* Pods_SwiftUIOAuth.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +67,11 @@
 		102A2343260C385B008FCDFD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		102A234B260C3AE6008FCDFD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		102A23C0260C5A5D008FCDFD /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
-		102A23D3260EBEE6008FCDFD /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		102A23D3260EBEE6008FCDFD /* TabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedView.swift; sourceTree = "<group>"; };
 		102A23E6260EDD50008FCDFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		102A23EB26100CD5008FCDFD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		102A23F326100D0A008FCDFD /* BlogPostsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogPostsView.swift; sourceTree = "<group>"; };
+		102A23F826100D10008FCDFD /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		165F6677F143B26E4B4260FB /* Pods-SwiftUIOAuth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIOAuth.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIOAuth/Pods-SwiftUIOAuth.release.xcconfig"; sourceTree = "<group>"; };
 		202FA6C6421168636A88D6C6 /* Pods-SwiftUIOAuth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIOAuth.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIOAuth/Pods-SwiftUIOAuth.debug.xcconfig"; sourceTree = "<group>"; };
 		65BF2553E7A3156EB24F561E /* Pods_SwiftUIOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,8 +175,11 @@
 			children = (
 				102A20B3260B640A008FCDFD /* SignInView.swift */,
 				102A231E260C12DA008FCDFD /* SignInViewUI.swift */,
+				102A23D3260EBEE6008FCDFD /* TabbedView.swift */,
 				102A234B260C3AE6008FCDFD /* HomeView.swift */,
-				102A23D3260EBEE6008FCDFD /* TestView.swift */,
+				102A23EB26100CD5008FCDFD /* SettingsView.swift */,
+				102A23F326100D0A008FCDFD /* BlogPostsView.swift */,
+				102A23F826100D10008FCDFD /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -419,15 +428,18 @@
 			files = (
 				102A234C260C3AE6008FCDFD /* HomeView.swift in Sources */,
 				102A20B4260B640A008FCDFD /* SignInView.swift in Sources */,
-				102A23D4260EBEE6008FCDFD /* TestView.swift in Sources */,
+				102A23D4260EBEE6008FCDFD /* TabbedView.swift in Sources */,
 				102A20B2260B640A008FCDFD /* SwiftUIOAuthApp.swift in Sources */,
 				102A233A260C37CD008FCDFD /* User.swift in Sources */,
 				102A2344260C385B008FCDFD /* Extensions.swift in Sources */,
 				102A231F260C12DA008FCDFD /* SignInViewUI.swift in Sources */,
+				102A23F426100D0A008FCDFD /* BlogPostsView.swift in Sources */,
 				102A232A260C174C008FCDFD /* AppDelegate.swift in Sources */,
 				102A233F260C37FF008FCDFD /* UserViewModel.swift in Sources */,
+				102A23EC26100CD5008FCDFD /* SettingsView.swift in Sources */,
 				102A23C1260C5A5D008FCDFD /* UserDataStore.swift in Sources */,
 				102A20F7260B6CAE008FCDFD /* AuthManager.swift in Sources */,
+				102A23F926100D10008FCDFD /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

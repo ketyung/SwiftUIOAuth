@@ -14,24 +14,18 @@ struct HomeView : View {
     
     var body : some View {
         
-        VStack(spacing: 50){
+        VStack(spacing:10) {
+       
+            Text("Welcome Back")
+            .font(.body)
             
-            VStack {
+            Text(userViewModel.displayName)
+            .font(.headline)
            
-                Text("Welcome Back")
-                .font(.body)
-                
-                Text(userViewModel.displayName)
-                .font(.headline)
-               
-            }
+            Spacer()
+            .frame(height:50)
             
-            Button(action: {
-                userViewModel.signOut()
-            }){
-                
-                Text("Sign Out")
-            }
+            Image("welcome")
         }
     }
 }
