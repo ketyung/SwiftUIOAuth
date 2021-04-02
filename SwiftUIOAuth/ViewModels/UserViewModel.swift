@@ -5,17 +5,11 @@
 //  Created by Chee Ket Yung on 25/03/2021.
 //
 
-import Foundation
 import FirebaseUI
 
 class UserViewModel : NSObject, ObservableObject {
     
-    @Published private var user =  DS.shared.load() {
-        
-        didSet {
-            DS.shared.save(user)
-        }
-    }
+    @Published private var user =  DS.shared.load()
     
     override init(){
         
@@ -73,6 +67,7 @@ extension UserViewModel : FUIAuthDelegate{
                 
             self.user.userId = result.user.uid
             
+            DS.shared.save(user)
         }
     }
     

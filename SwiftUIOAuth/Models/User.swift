@@ -9,11 +9,11 @@ import Foundation
 
 struct User : Codable {
     
-    private var signedIn : Bool = false
-    
     var userId : String = ""
     
     var displayName : String = ""
+    
+    private var signedIn : Bool = false
     
     var hasSignedIn : Bool {
         
