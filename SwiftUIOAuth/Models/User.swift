@@ -11,6 +11,10 @@ struct User : Codable {
     
     private var signedIn : Bool = false
     
+    var userId : String = ""
+    
+    var displayName : String = ""
+    
     var hasSignedIn : Bool {
         
         set(newSignedIn){
@@ -23,9 +27,4 @@ struct User : Codable {
             return self.signedIn && AM.shared.isSignedIn()
         }
     }
-    
-    var userId : String = ""
-    
-    var displayName : String = "" 
-    
 }

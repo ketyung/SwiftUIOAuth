@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 typealias DS  = UserDataStore
 
 struct UserDataStore {

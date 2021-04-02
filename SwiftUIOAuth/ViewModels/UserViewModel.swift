@@ -13,7 +13,7 @@ class UserViewModel : NSObject, ObservableObject {
     @Published private var user =  DS.shared.load() {
         
         didSet {
-            saveUser()
+            DS.shared.save(user)
         }
     }
     
@@ -78,15 +78,6 @@ extension UserViewModel : FUIAuthDelegate{
     
 }
 
-extension UserViewModel {
-    
-    
-    func saveUser(){
-        
-        DS.shared.save(user)
-       // print("saved.User::")
-    }
-}
 
 
 extension UserViewModel {
