@@ -20,7 +20,7 @@ struct BlogPostsView : View {
                    Text("1. Add Google OAuth, FB, Twitter sign-in with FirebaseUI in your SwiftUI app")
                 }
             
-                NavigationLink(destination: WebView(urlString : "https://blog.techchee.com/scheduling-local-notification-swiftui")){
+                NavigationLink(destination: WebView(urlString : "https://blog.techchee.com/sign-in-out-with-firebaseui-swiftui")){
                     
                    Text("2. Handling FirebaseUI sign-in in SwiftUI - the MVVM way")
                 }

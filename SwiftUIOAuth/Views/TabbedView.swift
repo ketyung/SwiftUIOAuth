@@ -41,13 +41,11 @@ extension TabbedView {
             }
             .tag(1)
                 
-            
             BlogPostsView()
             .tabItem {
                 Label("Tutorials", systemImage: "book")
             }
             .tag(3)
-                
            
         }
     }

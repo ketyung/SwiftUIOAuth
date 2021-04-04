@@ -53,15 +53,15 @@ struct SettingsView : View {
             
             
               Section(header: Text("")) {
-          
+              
                     Button(action: {
                         self.showSignOutPrompt.toggle()
                     }){
                     
                        SettingRowView(title: "Sign Out", systemImageName: "arrow.backward.circle")
                       .foregroundColor(.gray)
-                        
                     }
+                
               }
             
         

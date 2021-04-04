@@ -12,7 +12,6 @@ struct SwiftUIOAuthApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
-    
     @StateObject private var userViewModel = UserViewModel()
     
     var body: some Scene {
@@ -33,9 +32,7 @@ extension SwiftUIOAuthApp {
         
         if ( userViewModel.hasSignedIn ){
             
-            withAnimation {
-                TabbedView()
-            }
+            TabbedView()
         }
         else {
           

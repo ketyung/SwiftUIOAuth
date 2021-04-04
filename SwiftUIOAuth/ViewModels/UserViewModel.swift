@@ -77,7 +77,6 @@ extension UserViewModel : FUIAuthDelegate{
 
 extension UserViewModel {
     
-    
     func signOut(){
         AM.shared.signOut{
             err in
